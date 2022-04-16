@@ -10,7 +10,11 @@
  * }
  */
 public class Solution {
-    // SOLUTION TWO - RECURSION
+
+// -----------------------------------------------------------------------------------------------------
+// SOLUTION TWO - RECURSION ----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------
+
     public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) {
             return list2;
@@ -29,7 +33,43 @@ public class Solution {
         }
     }
 
-    // // SOLUTION ONE - DIRTY
+// -----------------------------------------------------------------------------------------------------
+// OLUTION THREE - CLEANER LOOP ------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------
+
+    // public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
+    //     ListNode rootNode = new ListNode();
+    //     ListNode indexNode = rootNode;
+        
+    //     while (list1 != null || list2 != null) {
+    //         if (list1 == null) {
+    //             indexNode.next = list2;
+    //             break;
+    //         }
+    //         else if (list2 == null) {
+    //             indexNode.next = list1;
+    //             break;
+    //         }
+    //         else {
+    //             if (list1.val <= list2.val) {
+    //                 indexNode.next = list1;
+    //                 list1 = list1.next;
+    //             }
+    //             else {
+    //                 indexNode.next = list2;
+    //                 list2 = list2.next;
+    //             }
+    //         }
+    //         indexNode = indexNode.next;
+    //     }
+        
+    //     return rootNode.next;
+    // }
+
+// -----------------------------------------------------------------------------------------------------
+// SOLUTION ONE - DIRTY --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------
+
     // public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
     //     if (list1 == null && list2 == null) return null;
         
